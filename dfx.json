@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "composite": {
+      "main": "src/composite/main.mo",
+      "type": "motoko"
+    },
+    "composite_assets": {
+      "dependencies": [
+        "composite"
+      ],
+      "frontend": {
+        "entrypoint": "src/composite_assets/src/index.html"
+      },
+      "source": [
+        "src/composite_assets/assets",
+        "dist/composite_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
